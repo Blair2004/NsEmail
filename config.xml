@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>NsEmail</namespace>
+    <version>1.0</version>
+    <author>Nexo Solutions LLC</author>
+    <name>Email Service Provider</name>
+    <description>Provides a convenient way of registering Email Service providers to NexoPOS.</description>
+</module>
