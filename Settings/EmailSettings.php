@@ -9,9 +9,11 @@ use App\Classes\FormInput;
 use App\Classes\Hook;
 use App\Classes\Output;
 use App\Classes\SettingForm;
+use App\Events\RenderFooterEvent;
 use App\Services\SettingsPage;
 use App\Services\ModulesService;
 use App\Services\Helper;
+use Illuminate\Support\Facades\Event;
 
 class EmailSettings extends SettingsPage
 {
@@ -264,8 +266,8 @@ class EmailSettings extends SettingsPage
 
     public function beforeRenderForm()
     {
-        Hook::addAction( 'ns-dashboard-footer', function( Output $output ) {
-            $output->addView( 'NsEmail::settings.email-test' );
+        Event::listen( RenderFooterEvent::class, function( RenderFooterEvent $event ) {
+            $event->output->addView( 'NsEmail::settings.email-test' );
         });
     }
 }
