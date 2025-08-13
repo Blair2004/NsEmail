@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <module>
     <namespace>NsEmail</namespace>
-    <version>5.3.1</version>
+    <version>6.0.0</version>
     <author>Nexo Solutions LLC</author>
     <name>Email Service Driver</name>
     <description>Provides a convenient way of registering Email Service Drivers to NexoPOS.</description>
-    <core min-version="5.3.0" max-version="5.4.0"/>
+    <core min-version="6.0.0" max-version="6.99.0"/>
 </module>
